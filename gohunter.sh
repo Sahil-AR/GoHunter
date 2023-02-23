@@ -68,20 +68,19 @@ install_tools() {
   if [[ "$1" == "all" ]]; then
     echo "Installing all tools..."
     for tool in "${tools[@]}"
-do
-install_tool "$tool"
-done
+    do
+        install_tool "$tool"
+    done
 elif [[ "$1" == "custom" ]]; then
-echo "Select which tools to install:"
-select tool in "${tools[@]}"
-do
-if [[ -n "$tool" ]]; then
-install_tool "$tool"
-fi
-break
-done
+    echo "Select which tools to install:"
+    select tool in "${tools[@]}"
+    do
+        if [[ -n "$tool" ]]; then
+            install_tool "$tool"
+        fi
+        break
+    done
 else
-echo "Invalid option. Usage: ./gohunter.sh [all|custom]"
-exit 1
+    echo "Invalid option. Usage: $0 {all|custom}"
+    exit 1
 fi
-echo "Done installing GoHunter!"
