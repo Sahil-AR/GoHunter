@@ -18,5 +18,7 @@ GoHunter includes the following tools:
 
 To install GoHunter on Linux, run the following commands:
 git clone https://github.com/Sahil-AR/GoHunter.git
+
 cd GoHunter
-sudo ./install.sh
+
+sudo ./gohunter.sh
