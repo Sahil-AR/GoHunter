@@ -13,7 +13,6 @@ exec &> >(tee -a "$LOG_FILE")
 
 # Install dependencies
 echo "Installing dependencies..."
-apt update
 apt install -y wget curl git gcc
 
 # Install Go
@@ -82,7 +81,7 @@ fi
 break
 done
 else
-echo "Invalid option. Usage: ./install.sh [all|custom]"
+echo "Invalid option. Usage: ./gohunter.sh [all|custom]"
 exit 1
 fi
 echo "Done installing GoHunter!"
